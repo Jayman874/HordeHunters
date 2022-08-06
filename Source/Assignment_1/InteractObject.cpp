@@ -12,7 +12,7 @@ AInteractObject::AInteractObject()
     VisualMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMesh"));
     VisualMesh->SetupAttachment(RootComponent);
 
-    static ConstructorHelpers::FObjectFinder<UStaticMesh> UpgradeAsset(TEXT("/Game/Game/Props/SM_Rifle_01.SM_Rifle_01"));
+    static ConstructorHelpers::FObjectFinder<UStaticMesh> UpgradeAsset(TEXT("/Game/Game/Props/SM_billboard_forSale.SM_billboard_forSale"));
 
     if (UpgradeAsset.Succeeded())
     {
@@ -33,14 +33,26 @@ void AInteractObject::BeginPlay()
 void AInteractObject::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+    if (bDisableActor) {
+        RemoveActor(bDisableActor);
+    }
 	
-    FVector NewLocation = GetActorLocation();
-    FRotator NewRotation = GetActorRotation();
+    FVector Location = GetActorLocation();
+    FRotator Rotation = GetActorRotation();
     float RunningTime = GetGameTimeSinceCreation();
     float DeltaHeight = (FMath::Sin(RunningTime + DeltaTime) - FMath::Sin(RunningTime));
-    NewLocation.Z += DeltaHeight * FloatSpeed;
+    Location.Z += DeltaHeight * FloatSpeed;
     float DeltaRotation = DeltaTime * RotationSpeed;
-    NewRotation.Yaw += DeltaRotation;
-    SetActorLocationAndRotation(NewLocation, NewRotation);
+    Rotation.Yaw += DeltaRotation;
+    SetActorLocationAndRotation(Location, Rotation);
+}
+
+void AInteractObject::RemoveActor(bool bDisable)
+{
+    SetActorHiddenInGame(bDisable);
+	SetActorEnableCollision(!bDisable);
+    SetActorTickEnabled(!bDisable);
+	
 }
 

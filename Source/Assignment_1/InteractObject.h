@@ -23,13 +23,18 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InteractObject")
 	float RotationSpeed = 20.0f;
+	
+	UPROPERTY(EditAnywhere, Category = "RemoveActor")
+	bool bDisableActor;
 
-protected:
+	UFUNCTION(BlueprintCallable, Category = "RemoveActor")
+	void RemoveActor(bool Remove);
+		
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 public:	
 	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+protected:	virtual void Tick(float DeltaTime) override;
 
 };
