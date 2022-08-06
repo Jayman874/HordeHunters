@@ -1,26 +1,20 @@
 # COMP313 Assignment 1 
-## <your name>
+## Jayen Gulab
 
-## Cool Thing Title
+## Horde Hunters
 
 [Gameplay video](https://www.youtube.com/watch?v=WB6w7ovocpk)
 
 ## Description
 
 ### Main mechanic
-Stuff about the main action in the game
+This game is a shooter game where you run around a map and kill zombies chasing after you. It is inspired by the Call of Duty Zombie Mode. It is primarily a Third Person Shooter, but I have also added the ability to switch to a First Person Camera with the Middle Mouse Button. The Player character’s gun has a limited amount of ammo. This can be seen in an ammo count displayed on the UI. The Player also has a health bar which decreases if a zombie gets to close to them. On top of this the UI will also display the number of Points the Player has. Enemies also have a chance to drop ammo for the Player. Around the map there will be upgrades and shops for the player to buy things. These are denoted by a C++ Class Actor which Rotates and moves up and down. As well as this this class also has the ability to remove itself when needed. The upgrades you can get are increased magazine size and the ability to make the weapon fully automatic. Other things you can buy are ammo and health. The games ends when the Player character runs out of health and a Game Over screen is presented to them where they can either, restart the game, quit to main menu, or quit the game. This game also has a main menu, pause menu, and a settings menu. A second simpler level is also available.
 
 ### Development difficulties
-Getting the AI to want to take over the world was challenging as the return on investment is low.
+Some development difficulties I has during the development of this game was getting the player character to shoot his gun. This is a core part of the game and was difficult to implement as I was doing this when I first started unreal. This was a challenge because I was still trying to understand the fundamentals of unreal. Another difficulty I had during development was getting the some of the animations to work. I implemented the ability to let my character aim his gun to be more accurate. This was difficult to do because I have never used a dynamic animation system before. I had to research and learn how to add animations to my character in a way to make it look good. Getting Widgets to appear properly was also problematic at times are sometimes the interact Widget would not leave the screen even after leaving the collision box. This required me to google different ways to fix this issue. This issue took up a lot of my time and finding a fix for it was a challenge.
 
 ### Most interesting
-The parts of the game that really shine and show off my programming ability
+The most interesting part of the game in my opinion is the upgrade and shop system. This is because the upgrade system changes the way a Player can approach the game. For example, having the ability to upgrade your magazine size and make your weapon fully auto allows the Player to be more aggressive. In terms of programming the system required me to create many widgets and blueprints. These blueprints allow me to access variable from across my game. This includes changing variables in the MainCharacter blueprint. I also incorporated a C++ Actor Class into this system. These upgrades and shops are denoted by a spinning and floating sign which I made in C++. This sign also has an attribute which allows it to be destroyed after the upgrade has been bought.
 
 ### Reflection on Learning
-What was the most important this I learnt in the process.  One way to frame this is to look at things you struggled with and think about how you solved those and if that solution is **transferable** to similar situations.
-
-Reflections can be at multiple levels.  Specific things that you learnt about the code, things you learnt about programming in the environment, things about programming in general, things about learning, or even things about how you value different aspects of your life. We expect you to cover the general programming and learning reflections based on specific examples but showing that you have generalised from those a more interesting lesson.
-
-You need to edit this readme to discuss your project. .  If you are doing a technology then you need to change the header above.  Edit <your name> to be something like Simon McCallum
-
-The assingment description is in [Assignment 1 markdown](assignment1.md) 
+The most important thing I learned from this assignment was how to use blueprints efficiently to make a game. When I first started unreal, I was very overwhelmed by it. After a bit of experimentation and googling I began to learn that blueprint programming was quite similar to programming in any other language. This is because unreal contains things like for loops and if statements. This solution was transferable to other situations. For example, as I got further into this project, I found it easier to do things by myself instead of relying on google for the answer. This can be seen when I was programming the games upgrade system where I did not need google to figure anything out. This project also showed me it is pretty straightforward to code in C++ for a game in unreal. Everything you can do in blueprints can also be done in C++. One thing I took away from this skill I learned and the assignment as a whole is how to manage my time. If I were to do this project again, I would have started it a lot sooner. This would have given me more time to implement extra features into my game. This also would have meant that I would not have had to stay up as late to finish my game. I found myself staying up later than usual to finish my game.
