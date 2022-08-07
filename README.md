@@ -3,7 +3,7 @@
 
 ## Horde Hunters
 
-[Gameplay video](https://www.youtube.com/watch?v=WB6w7ovocpk)
+[Gameplay video](https://drive.google.com/file/d/1a1jJEmkuP9uw7Hh01d7SoU4ALnv7VoOL/view?usp=sharing)
 
 ## Description
 
